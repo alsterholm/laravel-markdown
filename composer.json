@@ -1,0 +1,26 @@
+{
+    "name": "andreasindal/laravel-markdown",
+    "description": "Simple Blade directive for markdown parsing.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas Indal",
+            "email": "andreas@rocketship.se"
+        }
+    ],
+    "require": {
+        "Illuminate/Support": "^5.2",
+        "erusev/parsedown": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Indal\\Markdown\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2"
+    }
+}
