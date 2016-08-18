@@ -35,6 +35,25 @@ class ParserTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals("<p><a href=\"#\">Link</a></p>", $html);
     }
+
+    /** @test */
+    function it_removes_leading_white_space()
+    {
+        $parser = new Parser(new Parsedown);
+
+        $markdown = "
+            This is **not** code.
+
+                This is code.
+        ";
+
+        $html = $parser->parse($markdown);
+
+        $this->assertEquals(
+            "<p>This is <strong>not</strong> code.</p>\n<pre><code>This is code.</code></pre>",
+            $html
+        );
+    }
 }
 
 function config() { return true; }

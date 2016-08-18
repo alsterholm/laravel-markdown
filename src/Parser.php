@@ -50,7 +50,7 @@ class Parser
             $markdown = preg_replace('/(\[.*\])\(javascript:.*\)/', '$1(#)', $markdown);
         }
 
-        return $this->parsedown->text($markdown);
+        return $this->parsedown->text(static::removeLeadingWhitespace($markdown));
     }
 
     /**
@@ -84,5 +84,26 @@ class Parser
         $markdown = ob_get_clean();
 
         return $this->parse($markdown);
+    }
+
+    /**
+     * Removes indentation according to the indentation of the first
+     * line, of the given markdown text. This prevents markdown
+     * from being rendered as code in unwanted places. Credit of
+     * this goes to Mohamed Said (@themsaid).
+     * 
+     * @param  string  $markdown
+     * @return string
+     */
+    public static function removeLeadingWhitespace($markdown)
+    {
+        $i = 0;
+
+        while (! $firstLine = explode("\n", $markdown)[$i]) {
+            $i++;
+        }
+
+        preg_match('/^( *)/', $firstLine, $matches);
+        return preg_replace('/^[ ]{'.strlen($matches[1]).'}/m', '', $markdown);
     }
 }

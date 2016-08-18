@@ -99,6 +99,10 @@ $html = $parser->parse('# Hello'); // <h1>Hello</h1>
 
 ```
 
+## Credits
+
+* Mohamed Said [(@themsaid)](https://github.com/themsaid)
+
 ## License
 
 Licensed under MIT. For more information, see the [LICENSE-file](https://github.com/andreasindal/laravel-markdown/blob/master/LICENSE).
