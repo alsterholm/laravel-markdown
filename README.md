@@ -1,6 +1,6 @@
 # Laravel-Markdown
 
-**NOTE**: For usage with Laravel 5.3, please refer to the [1.1 branch](https://github.com/andreasindal/laravel-markdown/tree/1.1).
+**NOTE**: For use with Laravel 5.3, please refer to the [1.1 branch](https://github.com/andreasindal/laravel-markdown/tree/1.1).
 
 A small, lightweight and easy-to-use Laravel package for handling markdown. It comes with a facade, a helper function and a Blade directive to make life easier for you.
 
