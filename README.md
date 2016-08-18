@@ -1,5 +1,7 @@
 # Laravel-Markdown
 
+**NOTE**: For usage with Laravel 5.3, please refer to the [1.1 branch](https://github.com/andreasindal/laravel-markdown/tree/1.1).
+
 A small, lightweight and easy-to-use Laravel package for handling markdown. It comes with a facade, a helper function and a Blade directive to make life easier for you.
 
 This package utilizes the [Parsedown-package](http://parsedown.org/) by @erusev.
@@ -8,7 +10,7 @@ This package utilizes the [Parsedown-package](http://parsedown.org/) by @erusev.
 
 To install it, simply pull it down with Composer. Run the `php artisan vendor:publish` command to publish the configuration file.
 
-    composer require andreasindal/laravel-markdown
+    composer require andreasindal/laravel-markdown:"1.0"
 
 All you have to do is to reference the service provider under the `'providers'` array in your `config/app.php` file. If you want to use the facade as well, include a reference under the `'aliases'` array in the same file.
 
