@@ -54,7 +54,7 @@ class MarkdownServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Parser::class, function ($app) {
-            $parsedown = new Parsedown;
+            $parsedown = new \ParsedownExtra;
 
             $parsedown->setUrlsLinked(config('markdown.urls'));
 
