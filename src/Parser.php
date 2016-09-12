@@ -13,7 +13,7 @@
 
 namespace Indal\Markdown;
 
-use Parsedown;
+use ParsedownExtra;
 use Indal\Markdown\Exceptions\InvalidTagException;
 
 class Parser
@@ -32,7 +32,7 @@ class Parser
      * 
      * @param  \Parsedown  $parsedown
      */
-    public function __construct(Parsedown $parsedown)
+    public function __construct(ParsedownExtra $parsedown)
     {
         $this->parsedown = $parsedown;
     }
