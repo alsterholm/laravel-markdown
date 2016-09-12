@@ -34,7 +34,7 @@ class MarkdownServiceProvider extends ServiceProvider
 
         Blade::directive('markdown', function($markdown) {
             if (! is_null($markdown)) {
-                return "<?php echo app('Indal\Markdown\Parser')->parse{$markdown}; ?>";
+                return "<?php echo app('Indal\Markdown\Parser')->parse({$markdown}); ?>";
             }
 
             return "<?php app('Indal\Markdown\Parser')->begin() ?>";
