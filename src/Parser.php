@@ -45,6 +45,10 @@ class Parser
      */
     public function parse($markdown)
     {
+        if (empty($markdown)) {
+            return '';
+        }
+
         if (config('markdown.xss')) {
             // Escape any XSS attempts
             $markdown = preg_replace('/(\[.*\])\(javascript:.*\)/', '$1(#)', $markdown);

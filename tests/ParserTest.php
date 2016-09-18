@@ -14,6 +14,14 @@ class ParserTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    function it_returns_an_empty_string_when_trying_to_parse_an_empty_string()
+    {
+        $parser = new Parser(new Parsedown);
+        
+        $this->assertEquals('', $parser->parse(''));
+    }
+
+    /** @test */
     public function it_transforms_a_block_of_markdown_into_html()
     {
         $parser = new Parser(new Parsedown);
