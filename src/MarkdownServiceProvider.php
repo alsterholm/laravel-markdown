@@ -57,6 +57,8 @@ class MarkdownServiceProvider extends ServiceProvider
             $parsedown = new Parsedown;
 
             $parsedown->setUrlsLinked(config('markdown.urls'));
+            $parsedown->setMarkupEscaped(config('markdown.escape_markup'));
+            $parsedown->setBreaksEnabled(config('markdown.breaks'));
 
             return new Parser($parsedown);
         });
