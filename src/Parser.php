@@ -49,12 +49,37 @@ class Parser
             return '';
         }
 
+        return $this->parsedown->text(
+            static::removeLeadingWhitespace($this->escape($markdown))
+        );
+    }
+
+    /**
+     * Parses a single line of markdown to HTML.
+     *
+     * @param  string  $markdown
+     * @return string
+     */
+    public function line($markdown)
+    {
+        return $this->parsedown->line($this->escape($markdown));
+    }
+
+    /**
+     * Escape any XSS attempts related to injecting JavaScript in
+     * anchor tags. Will only escape the string if the escape
+     * option is set to true in the config.
+     *
+     * @param  string  $markdown
+     * @return string
+     */
+    public function escape($markdown)
+    {
         if (config('markdown.xss')) {
-            // Escape any XSS attempts
-            $markdown = preg_replace('/(\[.*\])\(javascript:.*\)/', '$1(#)', $markdown);
+            return preg_replace('/(\[.*\])\(javascript:.*\)/', '$1(#)', $markdown);
         }
 
-        return $this->parsedown->text(static::removeLeadingWhitespace($markdown));
+        return $markdown;
     }
 
     /**
