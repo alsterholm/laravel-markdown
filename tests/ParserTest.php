@@ -14,6 +14,15 @@ class ParserTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    function it_can_transform_inlined_markdown_to_html()
+    {
+        $parser = new Parser(new Parsedown);
+
+        $html = $parser->line("**Hello**");
+        $this->assertEquals("<strong>Hello</strong>", $html);
+    }
+
+    /** @test */
     function it_returns_an_empty_string_when_trying_to_parse_an_empty_string()
     {
         $parser = new Parser(new Parsedown);
