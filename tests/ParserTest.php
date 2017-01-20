@@ -75,7 +75,7 @@ class ParserTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_transforms_markdown_extra_into_html()
     {
-        $parser = new Parser(new ParsedownExtra);
+        $parser = new Parser(new \ParsedownExtra);
 
         $html = $parser->parse("# Hello");
         $this->assertEquals("<h1>Hello</h1>", $html);
@@ -84,7 +84,7 @@ class ParserTest extends PHPUnit_Framework_TestCase
     /** @test */
     function it_can_transform_inlined_markdown_extra_to_html()
     {
-        $parser = new Parser(new ParsedownExtra);
+        $parser = new Parser(new \ParsedownExtra);
 
         $html = $parser->line("**Hello**");
         $this->assertEquals("<strong>Hello</strong>", $html);
@@ -93,7 +93,7 @@ class ParserTest extends PHPUnit_Framework_TestCase
     /** @test */
     function it_returns_an_empty_string_when_trying_to_parse_an_empty_string_from_markdown_extra()
     {
-        $parser = new Parser(new ParsedownExtra);
+        $parser = new Parser(new \ParsedownExtra);
 
         $this->assertEquals('', $parser->parse(''));
     }
@@ -101,7 +101,7 @@ class ParserTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_transforms_a_block_of_markdown_extra_into_html()
     {
-        $parser = new Parser(new ParsedownExtra);
+        $parser = new Parser(new \ParsedownExtra);
 
         $parser->begin();
         echo "# Hello\n";
@@ -114,7 +114,7 @@ class ParserTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_removes_javascript_from_links_from_markdown_extra()
     {
-        $parser = new Parser(new ParsedownExtra);
+        $parser = new Parser(new \ParsedownExtra);
 
         $html = $parser->parse("[Link](javascript:alert('xss'))");
 
@@ -124,7 +124,7 @@ class ParserTest extends PHPUnit_Framework_TestCase
     /** @test */
     function it_removes_leading_white_space_from_markdown_extra()
     {
-        $parser = new Parser(new ParsedownExtra);
+        $parser = new Parser(new \ParsedownExtra);
 
         $markdown = "
             This is **not** code.
