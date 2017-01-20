@@ -30,9 +30,9 @@ class Parser
      * Create a new Parser object, used for
      * parsing markdown strings to HTML.
      * 
-     * @param  \Parsedown  $parsedown
+     * @param  \Parsedown|\ParsedownExtra  $parsedown
      */
-    public function __construct(Parsedown $parsedown)
+    public function __construct($parsedown)
     {
         $this->parsedown = $parsedown;
     }
