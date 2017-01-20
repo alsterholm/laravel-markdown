@@ -10,7 +10,8 @@
     ],
     "require": {
         "Illuminate/Support": "^5.2",
-        "erusev/parsedown": "^1.6"
+        "erusev/parsedown": "^1.6",
+        "erusev/parsedown-extra": "^0.7"
     },
     "autoload": {
         "psr-4": {

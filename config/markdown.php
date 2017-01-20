@@ -1,7 +1,19 @@
 <?php
 
 return [
-    
+
+    /*
+    |--------------------------------------------------------------------------
+    | Markdown extra
+    |--------------------------------------------------------------------------
+    |
+    | This option controls whether or not to use Parsedown Extra
+    | https://github.com/erusev/parsedown-extra
+    |
+    */
+
+    'extra' => false,
+
     /*
     |--------------------------------------------------------------------------
     | Escape output

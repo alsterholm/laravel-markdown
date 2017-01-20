@@ -15,7 +15,6 @@ namespace Indal\Markdown;
 
 use Blade;
 use Parsedown;
-use Indal\Markdown\Parser;
 use Illuminate\Support\ServiceProvider;
 
 class MarkdownServiceProvider extends ServiceProvider
@@ -54,7 +53,7 @@ class MarkdownServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Parser::class, function ($app) {
-            $parsedown = new Parsedown;
+            $parsedown = config('markdown.extra') ? new Parsedown : new ParsedownExtra;
 
             $parsedown->setUrlsLinked(config('markdown.urls'));
             $parsedown->setMarkupEscaped(config('markdown.escape_markup'));
