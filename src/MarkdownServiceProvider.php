@@ -17,6 +17,7 @@ use Blade;
 use Parsedown;
 use Indal\Markdown\Parser;
 use Illuminate\Support\ServiceProvider;
+use Indal\Markdown\Drivers\ParsedownDriver;
 
 class MarkdownServiceProvider extends ServiceProvider
 {
