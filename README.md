@@ -1,10 +1,12 @@
 # Laravel-Markdown
 
-**NOTE:** For use with Laravel 5.2, please refer to the [master branch](https://github.com/andreasindal/laravel-markdown/tree/master).
-
 A small, lightweight and easy-to-use Laravel package for handling markdown. It comes with a facade, a helper function and a Blade directive to make life easier for you.
 
-This package utilizes the [Parsedown-package](http://parsedown.org/) by @erusev.
+| Laravel version | Laravel-Markdown version                                            |
+| --------------- | ------------------------------------------------------------------- |
+| 5.5             | [2.0](https://github.com/andreasindal/laravel-markdown/tree/2.0)    |
+| 5.3, 5.4        | [1.1](https://github.com/andreasindal/laravel-markdown/tree/1.1)    |
+| 5.2             | [1.0](https://github.com/andreasindal/laravel-markdown/tree/master) |
 
 ## Installation
 
@@ -12,29 +14,7 @@ To install it, simply pull it down with Composer. Run the `php artisan vendor:pu
 
     composer require andreasindal/laravel-markdown
 
-All you have to do is to reference the service provider under the `'providers'` array in your `config/app.php` file. If you want to use the facade as well, include a reference under the `'aliases'` array in the same file.
-
-```php
-// config/app.php
-
-'providers' => [
-    // ...
-    
-    Indal\Markdown\MarkdownServiceProvider::class,
-
-    // ...
-];
-
-'aliases' => [
-    // ...
-    
-    'Markdown' => Indal\Markdown\Facade::class,
-
-    // ...
-];
-```
-
-## Configuration
+Laravel 5.5 uses Package Auto-Discovery, so you do not have to manually add the MarkdownServiceProvider.
 
 ## Usage
 
@@ -98,6 +78,13 @@ $parser = app('Indal\Markdown\Parser');
 $html = $parser->parse('# Hello'); // <h1>Hello</h1>
 
 ```
+
+### Drivers (NEW!)
+
+Laravel-Markdown allows you to add custom markdown drivers. In order to use a custom markdown driver, you need to create a class that implements the `Indal\Markdown\Drivers\MarkdownDriver` interface. The interface contains two methods: `text` and `line`. `text` is used to convert a block of markdown to HTML, while `line` is used to convert a single line.
+
+Laravel-Markdown ships with a `ParsedownDriver` using the [Parsedown-package](http://parsedown.org/) by @erusev.
+
 
 ## Credits
 

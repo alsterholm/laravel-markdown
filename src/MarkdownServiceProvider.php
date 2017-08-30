@@ -54,13 +54,7 @@ class MarkdownServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Parser::class, function ($app) {
-            $parsedown = new Parsedown;
-
-            $parsedown->setUrlsLinked(config('markdown.urls'));
-            $parsedown->setMarkupEscaped(config('markdown.escape_markup'));
-            $parsedown->setBreaksEnabled(config('markdown.breaks'));
-
-            return new Parser($parsedown);
+            return new Parser(new ParsedownDriver(config('markdown')));
         });
 
         $this->app->bind('markdown', Parser::class);
