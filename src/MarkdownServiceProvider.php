@@ -55,7 +55,7 @@ class MarkdownServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Parser::class, function ($app) {
-            return new Parser(new ParsedownDriver(config('markdown')));
+            return new Parser(new ParsedownDriver(config('markdown') ?? []));
         });
 
         $this->app->bind('markdown', Parser::class);
