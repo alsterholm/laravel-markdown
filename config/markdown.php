@@ -1,7 +1,7 @@
 <?php
 
 return [
-    
+
     /*
     |--------------------------------------------------------------------------
     | Escape output
@@ -33,7 +33,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | This option controls whether or not HTML entities should be escaped.
-    | If this option is false, then users could be able to insert any
+    | If this option is true, then users could be able to insert any
     | arbitrary HTML/scripts which may lead to XSS vulnerabilities.
     |
     */
