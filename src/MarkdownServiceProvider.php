@@ -17,6 +17,7 @@ use Blade;
 use Parsedown;
 use Indal\Markdown\Parser;
 use Illuminate\Support\ServiceProvider;
+use Indal\Markdown\Drivers\ParsedownDriver;
 
 class MarkdownServiceProvider extends ServiceProvider
 {
@@ -33,8 +34,8 @@ class MarkdownServiceProvider extends ServiceProvider
         ]);
 
         Blade::directive('markdown', function($markdown) {
-            if (! is_null($markdown)) {
-                return "<?php echo app('Indal\Markdown\Parser')->parse{$markdown}; ?>";
+            if ($markdown) {
+                return "<?php echo app('Indal\Markdown\Parser')->parse($markdown); ?>";
             }
 
             return "<?php app('Indal\Markdown\Parser')->begin() ?>";
@@ -54,11 +55,7 @@ class MarkdownServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Parser::class, function ($app) {
-            $parsedown = new Parsedown;
-
-            $parsedown->setUrlsLinked(config('markdown.urls'));
-
-            return new Parser($parsedown);
+            return new Parser(new ParsedownDriver(config('markdown') ?? []));
         });
 
         $this->app->bind('markdown', Parser::class);
