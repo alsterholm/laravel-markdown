@@ -1,10 +1,15 @@
 # Laravel-Markdown
 
-**NOTE:** For use with Laravel 5.2, please refer to the [master branch](https://github.com/andreasindal/laravel-markdown/tree/master).
-
 A small, lightweight and easy-to-use Laravel package for handling markdown. It comes with a facade, a helper function and a Blade directive to make life easier for you.
 
 This package utilizes the [Parsedown-package](http://parsedown.org/) by @erusev.
+
+| Laravel version | Laravel-Markdown version                                            |
+| --------------- | ------------------------------------------------------------------- |
+| 5.6             | [3.0](https://github.com/andreasindal/laravel-markdown/tree/master) |
+| 5.5             | [2.0](https://github.com/andreasindal/laravel-markdown/tree/2.0)    |
+| 5.3, 5.4        | [1.1](https://github.com/andreasindal/laravel-markdown/tree/1.1)    |
+| 5.2             | [1.0](https://github.com/andreasindal/laravel-markdown/tree/1.0)    |
 
 ## Installation
 
