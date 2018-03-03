@@ -4,9 +4,10 @@ A small, lightweight and easy-to-use Laravel package for handling markdown. It c
 
 | Laravel version | Laravel-Markdown version                                            |
 | --------------- | ------------------------------------------------------------------- |
+| 5.6             | [3.0](https://github.com/andreasindal/laravel-markdown/tree/master) |
 | 5.5             | [2.0](https://github.com/andreasindal/laravel-markdown/tree/2.0)    |
 | 5.3, 5.4        | [1.1](https://github.com/andreasindal/laravel-markdown/tree/1.1)    |
-| 5.2             | [1.0](https://github.com/andreasindal/laravel-markdown/tree/master) |
+| 5.2             | [1.0](https://github.com/andreasindal/laravel-markdown/tree/1.0)    |
 
 ## Installation
 
