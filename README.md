@@ -1,5 +1,7 @@
 # Laravel-Markdown
 
+[![Build Status](https://travis-ci.org/andreasindal/laravel-markdown.svg?branch=master)](https://travis-ci.org/andreasindal/laravel-markdown)
+
 A small, lightweight and easy-to-use Laravel package for handling markdown. It comes with a facade, a helper function and a Blade directive to make life easier for you.
 
 | Laravel version | Laravel-Markdown version                                            |
