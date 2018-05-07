@@ -15,7 +15,7 @@ This package utilizes the [Parsedown-package](http://parsedown.org/) by @erusev.
 
 To install it, simply pull it down with Composer. Run the `php artisan vendor:publish` command to publish the configuration file.
 
-    composer require andreasindal/laravel-markdown
+    composer require andreasindal/laravel-markdown:"1.1"
 
 All you have to do is to reference the service provider under the `'providers'` array in your `config/app.php` file. If you want to use the facade as well, include a reference under the `'aliases'` array in the same file.
 
