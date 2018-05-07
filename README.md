@@ -15,7 +15,7 @@ A small, lightweight and easy-to-use Laravel package for handling markdown. It c
 
 To install it, simply pull it down with Composer. Run the `php artisan vendor:publish` command to publish the configuration file.
 
-    composer require andreasindal/laravel-markdown:"1.0"
+    composer require andreasindal/laravel-markdown:"3.0"
 
 Laravel 5.5 uses Package Auto-Discovery, so you do not have to manually add the MarkdownServiceProvider.
 
