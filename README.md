@@ -4,20 +4,21 @@
 
 A small, lightweight and easy-to-use Laravel package for handling markdown. It comes with a facade, a helper function and a Blade directive to make life easier for you.
 
-| Laravel version | Laravel-Markdown version                                            |
-| --------------- | ------------------------------------------------------------------- |
-| 5.6             | [3.0](https://github.com/andreasindal/laravel-markdown/tree/master) |
-| 5.5             | [2.0](https://github.com/andreasindal/laravel-markdown/tree/2.0)    |
-| 5.3, 5.4        | [1.1](https://github.com/andreasindal/laravel-markdown/tree/1.1)    |
-| 5.2             | [1.0](https://github.com/andreasindal/laravel-markdown/tree/1.0)    |
+| Laravel version | Laravel-Markdown version                                              |
+| --------------- | --------------------------------------------------------------------  |
+| 5.7             | [3.0.1](https://github.com/andreasindal/laravel-markdown/tree/3.0.1) |
+| 5.6             | [3.0](https://github.com/andreasindal/laravel-markdown/tree/3.0)      |
+| 5.5             | [2.0](https://github.com/andreasindal/laravel-markdown/tree/2.0)      |
+| 5.3, 5.4        | [1.1](https://github.com/andreasindal/laravel-markdown/tree/1.1)      |
+| 5.2             | [1.0](https://github.com/andreasindal/laravel-markdown/tree/1.0)      |
 
 ## Installation
 
 To install it, simply pull it down with Composer. Run the `php artisan vendor:publish` command to publish the configuration file.
 
-    composer require andreasindal/laravel-markdown:"3.0"
+    composer require andreasindal/laravel-markdown:"3.0.1"
 
-Laravel 5.5 uses Package Auto-Discovery, so you do not have to manually add the MarkdownServiceProvider.
+Laravel 5.5 and above use Package Auto-Discovery, so you do not have to manually add the MarkdownServiceProvider.
 
 ## Usage
 
