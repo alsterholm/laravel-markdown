@@ -49,6 +49,11 @@ class ParsedownDriver implements MarkdownDriver
 
     private function setOptions(array $config)
     {
+        // xss config for backwards compatibility
+        if (isset($config['safe_mode']) || isset($config['xss'])) {
+            $this->parser->setSafeMode(true);
+        }
+
         if (isset($config['urls'])) {
             $this->parser->setUrlsLinked($config['urls']);
         }

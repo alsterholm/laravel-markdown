@@ -59,19 +59,6 @@ class ParserTest extends TestCase
     }
 
     /** @test */
-    public function it_removes_javascript_from_links()
-    {
-        $mock = Mockery::mock(MarkdownDriver::class);
-        $parser = new Parser($mock);
-
-        $mock->shouldReceive('text')->with("[Link](#)")->andReturn("<p><a href=\"#\">Link</a></p>");
-
-        $html = $parser->parse("[Link](javascript:alert('xss'))");
-
-        $this->assertEquals("<p><a href=\"#\">Link</a></p>", $html);
-    }
-
-    /** @test */
     function it_removes_leading_white_space()
     {
         $mock = Mockery::mock(MarkdownDriver::class);
