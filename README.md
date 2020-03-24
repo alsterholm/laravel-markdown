@@ -6,7 +6,7 @@ A small, lightweight and easy-to-use Laravel package for handling markdown. It c
 
 | Laravel version | Laravel-Markdown version                                              |
 | --------------- | --------------------------------------------------------------------  |
-| 5.8, 6.*        | [3.1.1](https://github.com/andreasindal/laravel-markdown/tree/3.1.1)  |
+| 5.8, 6.*, 7.*   | [3.1.1](https://github.com/andreasindal/laravel-markdown/tree/3.1.1)  |
 | 5.7             | [3.0.1](https://github.com/andreasindal/laravel-markdown/tree/3.0.1)  |
 | 5.6             | [3.0](https://github.com/andreasindal/laravel-markdown/tree/3.0)      |
 | 5.5             | [2.0](https://github.com/andreasindal/laravel-markdown/tree/2.0)      |
@@ -17,7 +17,7 @@ A small, lightweight and easy-to-use Laravel package for handling markdown. It c
 
 To install it, simply pull it down with Composer. Run the `php artisan vendor:publish` command to publish the configuration file.
 
-    composer require andreasindal/laravel-markdown:"3.0.1"
+    composer require andreasindal/laravel-markdown:"3.2.1"
 
 Laravel 5.5 and above use Package Auto-Discovery, so you do not have to manually add the MarkdownServiceProvider.
 
