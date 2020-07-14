@@ -1,3 +1,8 @@
+### ⚠️ Important
+**This project is no longer maintained, will not received any updates and will not support future versions of Laravel.**
+
+---
+
 # Laravel-Markdown
 
 [![Build Status](https://travis-ci.org/andreasindal/laravel-markdown.svg?branch=master)](https://travis-ci.org/andreasindal/laravel-markdown)
