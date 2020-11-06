@@ -6,13 +6,14 @@ return [
     |--------------------------------------------------------------------------
     | Escape output
     |--------------------------------------------------------------------------
-    |
-    | This option controls whether or not JavaScript in anchor tags should be
-    | escaped or not, e.g. markdown like "[Link](javascript:alert('xss'))".
+    | Escape user-input within the HTML that it generates. Additionally apply
+    | sanitisation to additional scripting vectors (such as scripting link
+    | destinations) that are introduced by the markdown syntax itself.
+    | https://github.com/erusev/parsedown#security
     |
     */
 
-    'xss' => true,
+    'safe_mode' => true,
 
     /*
     |--------------------------------------------------------------------------

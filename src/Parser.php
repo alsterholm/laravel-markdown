@@ -66,19 +66,11 @@ class Parser
     }
 
     /**
-     * Escape any XSS attempts related to injecting JavaScript in anchor tags.
-     * Will only escape the string if the escape option is set to true in the
-     * config.
-     *
      * @param  string  $text
      * @return string
      */
     public function escape($text)
     {
-        if (config('markdown.xss')) {
-            return preg_replace('/(\[.*\])\(javascript:.*\)/', '$1(#)', $text);
-        }
-
         return $text;
     }
 
